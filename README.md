@@ -1,86 +1,211 @@
-<!-- Animated Header -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00A8FF&center=true&vCenter=true&width=700&lines=👋+Hi+I'm+Sitheshwar;🚀+Generative+AI+Developer;💡+LangChain+%7C+LangGraph+%7C+LLM+Integration;🤖+Building+Smart+AI+Workflows!" alt="Typing SVG" />
-</p>
+# 📚 PDF RAG Question Answering System
+
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/🦜_LangChain-2C3E50?style=for-the-badge)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6584?style=for-the-badge)
+![AI](https://img.shields.io/badge/Generative_AI-00D9FF?style=for-the-badge&logo=openai&logoColor=white)
+
+### *Intelligent PDF Analysis powered by RAG (Retrieval-Augmented Generation)*
+
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-architecture) • [Contact](#-contact)
+
+</div>
 
 ---
 
-# 🧠 Docsxtract-Intelligence  
-### *Upload • Extract • Ask • Answer — Powered by Generative AI*
+## 🌟 Overview
 
-<p align="center">
-  <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background -->
-    <rect width="300" height="300" fill="#0d1117" rx="15"/>
+Transform your PDF documents into an intelligent knowledge base! This project leverages cutting-edge **Retrieval-Augmented Generation (RAG)** technology to extract, store, and query information from PDF files with remarkable accuracy.
+
+```
+📄 Upload PDF → 🔍 Extract Metadata → 💾 Store in ChromaDB → 🤖 AI-Powered Q&A → 💡 Get Answers
+```
+
+---
+
+## ✨ Features
+
+🎯 **Smart PDF Processing** - Automatically extract and process content from PDF documents
+
+🗄️ **Vector Database Storage** - Efficient metadata storage using ChromaDB for lightning-fast retrieval
+
+🧠 **RAG Technology** - Combines retrieval and generation for accurate, context-aware answers
+
+💬 **Natural Language Q&A** - Ask questions in plain English and get precise answers from your documents
+
+🔗 **LangChain Integration** - Built with LangChain and LangGraph for robust AI workflows
+
+⚡ **Fast & Efficient** - Optimized retrieval system for quick response times
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+graph LR
+    A[📄 PDF Upload] --> B[🔄 Content Extraction]
+    B --> C[✂️ Text Chunking]
+    C --> D[🧮 Embedding Generation]
+    D --> E[💾 ChromaDB Storage]
+    E --> F[❓ User Question]
+    F --> G[🔍 Similarity Search]
+    G --> H[🤖 LLM Processing]
+    H --> I[💡 Answer Generation]
     
-    <!-- Laptop -->
-    <rect x="60" y="200" width="180" height="25" rx="5" fill="#2f3640"/>
-    <rect x="75" y="140" width="150" height="70" rx="8" fill="#1e272e" stroke="#00a8ff" stroke-width="2"/>
-    
-    <!-- Screen Glow -->
-    <rect x="80" y="145" width="140" height="60" rx="6" fill="#00a8ff">
-      <animate attributeName="fill" values="#00a8ff;#0097e6;#00a8ff" dur="2s" repeatCount="indefinite"/>
-    </rect>
-    
-    <!-- Head -->
-    <circle cx="150" cy="100" r="25" fill="#718093" />
-    <circle cx="150" cy="100" r="22" fill="#f5f6fa" />
-
-    <!-- Body -->
-    <rect x="130" y="125" width="40" height="45" rx="10" fill="#718093" />
-
-    <!-- Typing Hands -->
-    <circle cx="130" cy="185" r="8" fill="#f5f6fa">
-      <animate attributeName="cy" values="185;190;185" dur="0.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="170" cy="185" r="8" fill="#f5f6fa">
-      <animate attributeName="cy" values="185;190;185" dur="0.4s" begin="0.2s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Floating Code Lines -->
-    <rect x="90" y="155" width="70" height="5" fill="#dcdde1">
-      <animate attributeName="width" values="70;100;70" dur="2s" repeatCount="indefinite" />
-    </rect>
-    <rect x="90" y="165" width="50" height="5" fill="#dcdde1">
-      <animate attributeName="width" values="50;90;50" dur="2s" begin="1s" repeatCount="indefinite" />
-    </rect>
-    <rect x="90" y="175" width="90" height="5" fill="#dcdde1">
-      <animate attributeName="width" values="90;110;90" dur="2s" begin="0.5s" repeatCount="indefinite" />
-    </rect>
-
-    <!-- Text -->
-    <text x="150" y="270" font-size="16" fill="#00a8ff" text-anchor="middle" font-family="Consolas, monospace">
-      Coding in Progress...
-      <animate attributeName="fill" values="#00a8ff;#82ccdd;#00a8ff" dur="2s" repeatCount="indefinite"/>
-    </text>
-  </svg>
-</p>
-
-> 🧾 Upload a PDF or DOCX — our AI extracts metadata, stores it in **ChromaDB**, finds vector similarities, and returns precise answers.
+    style A fill:#4CAF50
+    style E fill:#FF6584
+    style H fill:#00D9FF
+    style I fill:#FFD700
+```
 
 ---
 
-## ⚙️ Tech Stack
-| Language | Framework | Database | Vector Store |
-|-----------|------------|-----------|---------------|
-| 🐍 Python | LangChain | FastAPI | 🧠 ChromaDB |
+## 🚀 Installation
 
----
+### Prerequisites
 
-## 🚀 How It Works
-1. **Upload Document** → PDF/DOCX parsed  
-2. **Metadata Extraction** → Key info stored  
-3. **Vector Embeddings** → Using Bedrock LLM  
-4. **Question Answering** → Query AI for relevant context  
+- Python 3.8 or higher
+- pip package manager
 
----
+### Setup
 
-## 💻 Example Usage
+1. **Clone the repository**
 ```bash
-# Upload a PDF
-curl -X POST -F "file=@document.pdf" http://localhost:8000/upload
+git clone https://github.com/yourusername/pdf-rag-qa-system.git
+cd pdf-rag-qa-system
+```
+
+2. **Create a virtual environment**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Set up environment variables**
+```bash
+# Create a .env file with your API keys
+OPENAI_API_KEY=your_openai_api_key_here
+# Add other required API keys
+```
+
+---
+
+## 💻 Usage
+
+### Basic Usage
+
+```python
+from pdf_rag_system import PDFQASystem
+
+# Initialize the system
+qa_system = PDFQASystem()
+
+# Upload and process PDF
+qa_system.upload_pdf("path/to/your/document.pdf")
+
+# Ask questions
+response = qa_system.ask("What is the main topic discussed in the document?")
+print(response)
+```
+
+### Command Line Interface
+
+```bash
+# Process a PDF file
+python main.py --upload document.pdf
 
 # Ask a question
-curl -X POST -H "Content-Type: application/json" \
--d '{"question": "Summarize the contract terms"}' \
-http://localhost:8000/query
+python main.py --query "What are the key findings?"
+
+# Interactive mode
+python main.py --interactive
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **Python** | Core programming language |
+| **LangChain** | LLM orchestration framework |
+| **LangGraph** | Workflow management |
+| **ChromaDB** | Vector database for embeddings |
+| **OpenAI/HuggingFace** | Language models |
+| **PyPDF2/PDFPlumber** | PDF processing |
+
+---
+
+## 📊 How It Works
+
+### 1️⃣ **PDF Upload & Processing**
+The system accepts PDF files and extracts text content while preserving document structure and metadata.
+
+### 2️⃣ **Chunking & Embedding**
+Text is intelligently split into manageable chunks and converted into vector embeddings for efficient storage and retrieval.
+
+### 3️⃣ **ChromaDB Storage**
+Embeddings and metadata are stored in ChromaDB, a high-performance vector database optimized for similarity search.
+
+### 4️⃣ **Retrieval-Augmented Generation**
+When you ask a question:
+- The system searches for relevant chunks using semantic similarity
+- Retrieved context is passed to the LLM
+- The AI generates an accurate, context-aware answer
+
+---
+
+## 🎯 Use Cases
+
+- 📚 Research paper analysis
+- 📋 Legal document review
+- 📖 Educational content Q&A
+- 🏢 Corporate knowledge management
+- 📊 Report summarization
+- 🔍 Technical documentation search
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Sitheshwar**
+
+- 💼 Data Science Associate
+- 🔧 Proficient in LangChain & LangGraph
+- 💡 Ask me about GenAI
+- 📧 Email: [sitheshwarsp@gmail.com](mailto:sitheshwarsp@gmail.com)
+
+---
+
+<div align="center">
+
+### ⭐ Star this repo if you find it helpful!
+
+**Made with ❤️ and AI**
+
+</div>
